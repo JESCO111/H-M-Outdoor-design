@@ -6,34 +6,90 @@
 <title>H & M Outdoor Designs</title>
 
 <style>
+html {scroll-behavior:smooth;}
 body {font-family: Arial, sans-serif; margin:0; line-height:1.6; color:#333;}
+
 header {background:#2e7d32; color:white; padding:20px; text-align:center;}
-nav {background:#1b5e20; padding:12px; text-align:center;}
-nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
-.hero {
-  background:url('https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1560185127-6ed189bf02f4&data=05%7C02%7C%7Ce3041c7d24df4ce608a808de84877ba9%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639093914579942679%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=TJ%2B31%2BHFJ62TYogCAozGR7b0JUoXV6sNaUvVnArkbks%3D&reserved=0') center/cover;
-  color:white; padding:100px 20px; text-align:center;
+
+nav {
+  background:#1b5e20;
+  padding:12px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
-.hero h2 {font-size:40px;}
+nav a {
+  color:white; margin:0 15px;
+  text-decoration:none; font-weight:bold;
+}
+nav a:hover {text-decoration:underline;}
+
+.hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:120px 20px;
+  text-align:center;
+}
+.hero h2 {font-size:42px;}
+
 .section {padding:50px 20px; max-width:1100px; margin:auto;}
+
 .services {display:flex; flex-wrap:wrap; gap:20px;}
+
 .card {
   flex:1; min-width:250px;
-  background:#f4f4f4; padding:20px;
+  background:#f4f4f4;
+  padding:20px;
   border-radius:8px;
+  transition:transform 0.2s;
+}
+.card:hover {transform:translateY(-5px);}
+
+.gallery {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 .gallery img {
-  width:100%; max-width:300px; margin:10px;
+  width:100%;
+  max-width:320px;
+  margin:10px;
   border-radius:8px;
 }
-footer {background:#2e7d32; color:white; text-align:center; padding:20px;}
+
 .btn {
-  background:#2e7d32; color:white;
+  background:#2e7d32;
+  color:white;
   padding:12px 25px;
   text-decoration:none;
   border-radius:5px;
   display:inline-block;
   margin-top:15px;
+}
+.btn:hover {background:#1b5e20;}
+
+form {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-width:500px;
+}
+input, textarea {
+  padding:10px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+footer {
+  background:#2e7d32;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
@@ -54,8 +110,8 @@ footer {background:#2e7d32; color:white; text-align:center; padding:20px;}
 
 <section class="hero">
 <h2>Transform Your Outdoor Space</h2>
-<p>Serving Central New Jersey – Based in Plainfield, NJ 07060</p>
-<a href="#contact" class="btn">Get a Free Estimate</a>
+<p>Serving Central New Jersey – Based in Plainfield, NJ</p>
+<a href="tel:19082943297" class="btn">Call Now</a>
 </section>
 
 <section id="services" class="section">
@@ -93,32 +149,50 @@ and attention to detail.
 
 <section id="gallery" class="section">
 <h2>Our Work</h2>
-<p>Add your real project photos here to showcase your work.</p>
 
 <div class="gallery">
-<img src="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1599423300746-b62533397364&data=05%7C02%7C%7Ce3041c7d24df4ce608a808de84877ba9%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639093914579968804%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Zz4hXAoeC3dZrojXCroa3uZ0psqJUNlstw%2Fe8M7ICw8%3D&reserved=0">
-<img src="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1600585154340-be6161a56a0c&data=05%7C02%7C%7Ce3041c7d24df4ce608a808de84877ba9%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639093914579993094%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=oZc6BBEkXmRgg2j%2B75JlFtDlcN6oSzGD2L%2FKcYhAcdk%3D&reserved=0">
-<img src="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503387762-592deb58ef4e&data=05%7C02%7C%7Ce3041c7d24df4ce608a808de84877ba9%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639093914580014378%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=wIIbv8Kdl22si%2BBCVfzVtK4ygSk%2FNsLO4%2BY6%2BfvdCNk%3D&reserved=0">
+<img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1621887342174-6c1d5f7c3f6d">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
 </div>
 </section>
 
 <section id="contact" class="section">
 <h2>Contact Us</h2>
 
-<p><strong>Location:</strong> Plainfield, NJ 07060</p>
+<p><strong>Location:</strong> Plainfield, NJ</p>
 <p><strong>Service Area:</strong> Central New Jersey</p>
 
-<p><strong>Phone:</strong> (INSERT YOUR NUMBER)</p>
-<p><strong>Email:</strong> (INSERT YOUR EMAIL)</p>
+<p><strong>Phone:</strong> 908-294-3297</p>
 
-<a href="tel:YOURNUMBER" class="btn">Call Now</a>
-<a href="mailto:YOUREMAIL" class="btn">Request Quote</a>
+<a href="tel:19082943297" class="btn">Call Now</a>
+
+<h3>Request a Quote (Text Us)</h3>
+
+<form onsubmit="sendSMS(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="project" placeholder="Type of Service (Lawn, Patio, etc.)" required>
+<textarea id="message" rows="4" placeholder="Describe your project..." required></textarea>
+<button type="submit" class="btn">Send Request via Text</button>
+</form>
 
 </section>
 
 <footer>
 <p>© 2026 H & M Outdoor Designs | Central New Jersey Landscaping & Masonry</p>
 </footer>
+
+<script>
+function sendSMS() {
+  var name = document.getElementById("name").value;
+  var project = document.getElementById("project").value;
+  var message = document.getElementById("message").value;
+
+  var sms = `sms:19082943297?body=Name: ${name}%0AService: ${project}%0ADetails: ${message}`;
+  window.location.href = sms;
+}
+</script>
 
 </body>
 </html>
